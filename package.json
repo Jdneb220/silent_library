@@ -1,0 +1,25 @@
+{
+  "name": "silent_library",
+  "version": "1.0.0",
+  "description": "GA Sweetlibs Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jdneb220/silent_library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jdneb220/silent_library/issues"
+  },
+  "homepage": "https://github.com/Jdneb220/silent_library#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mustache-express": "^1.2.4",
+    "pg-promise": "^5.6.7"
+  }
+}
