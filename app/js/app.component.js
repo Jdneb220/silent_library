@@ -27,7 +27,7 @@ System.register(['angular2/core', './silentlibrary.component'], function(exports
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>Weekend Project by Ben, Ray and Liz</h1><silentlibrary></silentlibrary>',
+                        template: "<h1>Weekend Project by Ben, Ray and Liz</h1>\n    <silentlibrary></silentlibrary>\n    ",
                         directives: [silentlibrary_component_1.SilentLibraryComponent]
                     }), 
                     __metadata('design:paramtypes', [])
