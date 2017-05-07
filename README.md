@@ -1,6 +1,8 @@
-#Silent Library
-##Weekend project GA WDI
-##Ben, Liz, Ray
+# Silent Library
+
+## Weekend project GA WDI
+
+## Ben, Liz, Ray
 
 
 We've started our project from this template from Bucky Roberts: https://github.com/buckyroberts/angular-2-template
