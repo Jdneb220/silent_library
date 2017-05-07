@@ -55,10 +55,10 @@ export class SilentLibraryComponent {
     "Attach small cups to headbands. Contestants must throw balls into the air and catch it in their bucket without using their hands.",
     "Duplicate complicated ballet moves from a YouTube video.",
     "Contestant must do the chicken dance.",
-    "Contestant has to crush all the pieces of penne pasta into smaller pieces using your bare feet."
-    "Contestant must take a shot of maple syrup (use small bathroom cups.)"
+    "Contestant has to crush all the pieces of penne pasta into smaller pieces using your bare feet.",
+    "Contestant must take a shot of maple syrup (use small bathroom cups.)",
     "Duplicate complicated yoga moves from a YouTube video.",
-    "Contestants must all sit on whoopee cushions without laughing (The only sound allowed is the whoopee cushion)."
+    "Contestants must all sit on whoopee cushions without laughing (The only sound allowed is the whoopee cushion).",
     "Contestant must dance along to the video of Thriller by Michael Jackson.",
     "Contestants must drink an entire Happy Meal blended and puréed together (including the drink)"
     ];
