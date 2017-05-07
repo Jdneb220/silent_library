@@ -9,7 +9,8 @@ System.register([], function(exports_1, context_1) {
                 function SilentlibraryService() {
                 }
                 SilentlibraryService.prototype.getSilentlibrary = function () {
-                    return ["Rule1", "Rule2", "Rule3"];
+                    // punishments = ["Punishment1", "Punishment2"];
+                    // randPunish = punishments[Math.floor(Math.random() * punishments.length)];
                 };
                 return SilentlibraryService;
             }());
