@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {SilentlibraryService} from './silentlibrary.service'
+// import {SilentlibraryService} from './silentlibrary.service'
 
 @Component({
     selector: 'silentlibrary',
@@ -11,15 +11,15 @@ import {SilentlibraryService} from './silentlibrary.service'
       {{ rule }}
       </li>
     </ul>
-    `,
-    providers: [SilentlibraryService]
+    `
+    // providers: [SilentlibraryService]
 })
 
 export class SilentLibraryComponent {
   title = "Silent Library Rules";
   silentlibrary;
 
-  constructor(silentlibraryService: SilentlibraryService){
-    this.silentlibrary = silentlibraryService.getSilentlibrary();
-  }
+  // constructor(silentlibraryService: SilentlibraryService){
+  //   this.silentlibrary = silentlibraryService.getSilentlibrary();
+  // }
 }

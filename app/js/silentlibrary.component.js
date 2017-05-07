@@ -1,4 +1,4 @@
-System.register(['angular2/core', './silentlibrary.service'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,29 +10,25 @@ System.register(['angular2/core', './silentlibrary.service'], function(exports_1
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, silentlibrary_service_1;
+    var core_1;
     var SilentLibraryComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (silentlibrary_service_1_1) {
-                silentlibrary_service_1 = silentlibrary_service_1_1;
             }],
         execute: function() {
+            // import {SilentlibraryService} from './silentlibrary.service'
             SilentLibraryComponent = (function () {
-                function SilentLibraryComponent(silentlibraryService) {
+                function SilentLibraryComponent() {
                     this.title = "Silent Library Rules";
-                    this.silentlibrary = silentlibraryService.getSilentlibrary();
                 }
                 SilentLibraryComponent = __decorate([
                     core_1.Component({
                         selector: 'silentlibrary',
-                        template: "\n    <h1>Silent Library</h1>\n    {{ title }}\n    <ul>\n      <li *ngFor=\"#rule of rules\">\n      {{ rule }}\n      </li>\n    </ul>\n    ",
-                        providers: [silentlibrary_service_1.SilentlibraryService]
+                        template: "\n    <h1>Silent Library</h1>\n    {{ title }}\n    <ul>\n      <li *ngFor=\"#rule of rules\">\n      {{ rule }}\n      </li>\n    </ul>\n    "
                     }), 
-                    __metadata('design:paramtypes', [silentlibrary_service_1.SilentlibraryService])
+                    __metadata('design:paramtypes', [])
                 ], SilentLibraryComponent);
                 return SilentLibraryComponent;
             }());

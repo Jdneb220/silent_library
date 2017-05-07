@@ -1,4 +1,4 @@
-System.register(['angular2/core', './silentlibrary.component'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,15 +10,12 @@ System.register(['angular2/core', './silentlibrary.component'], function(exports
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, silentlibrary_component_1;
+    var core_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (silentlibrary_component_1_1) {
-                silentlibrary_component_1 = silentlibrary_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -27,8 +24,7 @@ System.register(['angular2/core', './silentlibrary.component'], function(exports
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>Weekend Project by Ben, Ray and Liz</h1><silentlibrary></silentlibrary>',
-                        directives: [silentlibrary_component_1.SilentLibraryComponent]
+                        template: "<h1>Weekend Project by Ben, Ray and Liz</h1>\n    <silentlibrary></silentlibrary>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
