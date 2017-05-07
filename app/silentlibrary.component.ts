@@ -18,7 +18,7 @@ import {SilentlibraryService} from './silentlibrary.service'
 export class SilentLibraryComponent {
   title = "Silent Library Rules";
   silentlibrary;
-
+  
   constructor(silentlibraryService: SilentlibraryService){
     this.silentlibrary = silentlibraryService.getSilentlibrary();
   }
