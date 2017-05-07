@@ -5,7 +5,7 @@ import {SilentlibraryService} from './silentlibrary.service'
     selector: 'silentlibrary',
     template: `
     <h1>Silent Library</h1>
-    {{ title }}
+    <p>{{ title }}</p>
     <ul>
       <li *ngFor="#rule of rules">
       {{ rule }}
@@ -17,6 +17,7 @@ import {SilentlibraryService} from './silentlibrary.service'
 
 export class SilentLibraryComponent {
   title = "Silent Library Rules";
+  rules = ["Rule1", "Rule2", "Rule3"];
   silentlibrary;
 
   constructor(silentlibraryService: SilentlibraryService){

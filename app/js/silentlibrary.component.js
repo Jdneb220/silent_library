@@ -24,12 +24,13 @@ System.register(['angular2/core', './silentlibrary.service'], function(exports_1
             SilentLibraryComponent = (function () {
                 function SilentLibraryComponent(silentlibraryService) {
                     this.title = "Silent Library Rules";
+                    this.rules = ["Rule1", "Rule2", "Rule3"];
                     this.silentlibrary = silentlibraryService.getSilentlibrary();
                 }
                 SilentLibraryComponent = __decorate([
                     core_1.Component({
                         selector: 'silentlibrary',
-                        template: "\n    <h1>Silent Library</h1>\n    {{ title }}\n    <ul>\n      <li *ngFor=\"#rule of rules\">\n      {{ rule }}\n      </li>\n    </ul>\n    ",
+                        template: "\n    <h1>Silent Library</h1>\n    <p>{{ title }}</p>\n    <ul>\n      <li *ngFor=\"#rule of rules\">\n      {{ rule }}\n      </li>\n    </ul>\n    ",
                         providers: [silentlibrary_service_1.SilentlibraryService]
                     }), 
                     __metadata('design:paramtypes', [silentlibrary_service_1.SilentlibraryService])
