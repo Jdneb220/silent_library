@@ -17,7 +17,8 @@ import {SilentlibraryService} from './silentlibrary.service'
             <h2>Punishments</h2>
             {{ clickMessage }}
             <br>
-            <button (click)="onClick($event)">Submit</button>
+            <button id="punButton" style="display: none;" (click)="onClick($event)">Submit</button>
+
         </div>
         <div class='col-md-8'>
             <div id="gameboard" style="padding:20px"></div>
@@ -71,22 +72,23 @@ export class SilentLibraryComponent {
     "Contestant must dance along to the video of Thriller by Michael Jackson.",
     "Contestants must drink an entire Happy Meal blended and puréed together (including the drink)"
     ];
-    cards = ["GA_Logo.png", "skull.png"];//we need to make the # of cards the same as players
+    //cards = ["GA_Logo.png", "skull.png"];//we need to make the # of cards the same as players
     onClick(event){
       var randPunIndex = Math.floor((Math.random() * (this.punishments.length)));
       this.clickMessage = this.punishments[randPunIndex];
       // console.log("this button was clicked")
     }
 
-    onClickCard(event){ //this is probably not useful :)
-      var randCardIndex = Math.floor((Math.random() * (this.cards.length)));
-      this.clickCard = this.cards[randCardIndex];
-    }
+    // onClickCard(event){ //this is probably not useful :)
+    //   var randCardIndex = Math.floor((Math.random() * (this.cards.length)));
+    //   this.clickCard = this.cards[randCardIndex];
+    // }
     silentlibrary;
 
 
   constructor(silentlibraryService: SilentlibraryService){
     this.silentlibrary = silentlibraryService.getSilentlibrary();
   }
+
 
 }

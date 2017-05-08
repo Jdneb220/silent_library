@@ -55,12 +55,14 @@
 <script>
 function flipOver(){
   let playButton = document.querySelector('#playButton');
-
   $(playButton).text(3)
   setTimeout(function(){$(playButton).text(2)},1000)
   setTimeout(function(){$(playButton).text(1)},2000)
   setTimeout(function(){
   $(playButton).text("Reset")
+  $('#punButton').click()
+  //select random punishment automatically?
+
 
   let allCards = document.querySelectorAll('.flip-toggle')
   let punishCardIndex = Math.floor(Math.random()*(allCards.length - 1))
