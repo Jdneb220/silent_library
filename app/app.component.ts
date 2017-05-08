@@ -7,7 +7,6 @@ import {AmountPlayersComponent} from
     selector: 'my-app',
     styleUrls: ['https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'],
     template: `
-
     <div class='row'>
     <div class='col-md-4'>
     <amount class="center-block"></amount>
