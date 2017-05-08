@@ -8,10 +8,12 @@ import {bootstrap} from 'angular2/bootstrap';
   <h1>{{ title }}</h1>
   <form id="playercount">
     <label for="playernumber">Select the amount of players</label>
-    <input type="number" name="playernumber">
-    <button (click)="onClick($event)"  >Submit</button>
+    <a class='sillycircle' (click)="onClick2(4)">4</a>
+    <a class='sillycircle' (click)="onClick2(5)">5</a>
+    <a class='sillycircle' (click)="onClick2(6)">6</a>
+    <a class='sillycircle' (click)="onClick2(7)">7</a>
+    <a class='sillycircle' (click)="onClick2(8)">8</a>
   </form>
-  {{ button }} <br>
   <h2>Amount of players: {{ players }}  {{ error }}</h2>
 `
 
@@ -21,6 +23,12 @@ import {bootstrap} from 'angular2/bootstrap';
    title = 'Choose the Amount of Players';
     players = 0;
     error = '';
+
+  onClick2(num){
+    this.players = num
+    this.buttonCheck(this.players)
+  }
+
   onClick(event){
     this.players = document.querySelector('#playercount > input[type="number"]').value
     this.buttonCheck(this.players)
@@ -29,7 +37,7 @@ import {bootstrap} from 'angular2/bootstrap';
   buttonCheck(num){
     let firstnode = document.querySelector('#playercount').children[2]
     if (num <= 12 && num >= 4) {
-        document.querySelector('#playercount').removeChild(firstnode)
+        document.querySelector('#playercount').remove()
         this.error = ''
         this.cardBuilder()
     } else {
@@ -48,12 +56,12 @@ import {bootstrap} from 'angular2/bootstrap';
         </div>
         <div class="back">
           <!-- back content -->
-          Back
+          Player ${x}
         </div>
       </div>
     </div>`
     }
-    document.querySelector('#gameboard').innerHTML += `<button onclick="flipOver()" class="sexyButton">Toggle Flip</button>`
+    document.querySelector('#gameboard').innerHTML += `<button id="playButton" onclick="flipOver()" class="sexyButton">Play</button>`
   }
 
 }

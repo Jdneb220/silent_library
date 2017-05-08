@@ -14,7 +14,10 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
     <!-- Configure SystemJS -->
     <script>
         System.config({
@@ -51,6 +54,14 @@
 </body>
 <script>
 function flipOver(){
+  let playButton = document.querySelector('#playButton');
+
+  $(playButton).text(3)
+  setTimeout(function(){$(playButton).text(2)},1000)
+  setTimeout(function(){$(playButton).text(1)},2000)
+  setTimeout(function(){
+  $(playButton).text("Reset")
+
   let allCards = document.querySelectorAll('.flip-toggle')
   let punishCardIndex = Math.floor(Math.random()*(allCards.length - 1))
   //assign backgrounds
@@ -72,6 +83,8 @@ function flipOver(){
   allCards.forEach(function(x,i){
     x.classList.toggle('hover');
     })
+
+  }, 3000)
 }
 </script>
 </html>
