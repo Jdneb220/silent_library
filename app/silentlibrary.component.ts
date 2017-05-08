@@ -18,11 +18,16 @@ import {SilentlibraryService} from './silentlibrary.service'
     {{ clickMessage }}
     <br>
     <button (click)="onClick($event)">Submit</button>
+    <h2>Cards</h2>
+    <img src="{{ clickCard }}" height=200px>
+    <br>
+    <button (click)="onClickCard($event)">Flip Card</button>
     `,
     providers: [SilentlibraryService]
 })
 export class SilentLibraryComponent {
   clickMessage = '';
+  clickCard = '';
   title = "Silent Library Rules";
   rules = ["Pick number of players", "On the count of three, flip over cards", "Whoever gets the skull card needs to do a task", "Must complete the task without making noise"];
   punishments = [
@@ -64,10 +69,16 @@ export class SilentLibraryComponent {
     "Contestant must dance along to the video of Thriller by Michael Jackson.",
     "Contestants must drink an entire Happy Meal blended and puréed together (including the drink)"
     ];
+    cards = ["GA_Logo.png", "skull.png"];//we need to make the # of cards the same as players
     onClick(event){
       var randPunIndex = Math.floor((Math.random() * (this.punishments.length)));
       this.clickMessage = this.punishments[randPunIndex];
       // console.log("this button was clicked")
+    }
+
+    onClickCard(event){ //this is probably not useful :)
+      var randCardIndex = Math.floor((Math.random() * (this.cards.length)));
+      this.clickCard = this.cards[randCardIndex];
     }
     silentlibrary;
 
