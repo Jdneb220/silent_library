@@ -81,7 +81,7 @@ System.register(['angular2/core', './silentlibrary.service'], function(exports_1
                 SilentLibraryComponent = __decorate([
                     core_1.Component({
                         selector: 'silentlibrary',
-                        template: "\n    <h1>Silent Library</h1>\n            <p>{{ title }}</p>\n            <ul>\n              <li *ngFor=\"#rule of rules\">\n              {{ rule }}\n              </li>\n            </ul>\n            <br>\n            <h2>Punishments</h2>\n            {{ clickMessage }}\n            <br>\n            <button (click)=\"onClick($event)\">Submit</button>\n    ",
+                        template: "\n    <h1>Silent Library</h1>\n            <p>{{ title }}</p>\n            <ul>\n              <li *ngFor=\"#rule of rules\">\n              {{ rule }}\n              </li>\n            </ul>\n            <br>\n            <h2>Punishments</h2>\n            {{ clickMessage }}\n            <br>\n            <button id=\"punButton\" style=\"display: none;\" (click)=\"onClick($event)\">Submit</button>\n    ",
                         providers: [silentlibrary_service_1.SilentlibraryService]
                     }), 
                     __metadata('design:paramtypes', [silentlibrary_service_1.SilentlibraryService])
