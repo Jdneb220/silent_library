@@ -65,6 +65,7 @@ export class SilentLibraryComponent {
     "Contestants must drink an entire Happy Meal blended and puréed together (including the drink)"
     ];
     cards = ["GA_Logo.png", "skull.png"];//we need to make the # of cards the same as players
+
     onClick(event){
       var randPunIndex = Math.floor((Math.random() * (this.punishments.length)));
       this.clickMessage = this.punishments[randPunIndex];

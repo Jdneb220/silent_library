@@ -11,7 +11,7 @@ import {AmountPlayersComponent} from
     <div class='row'>
     <div class='col-md-4'>
     <amount class="center-block"></amount>
-    <silentlibrary></silentlibrary>
+    <silentlibrary id="mysilentlibrary"></silentlibrary>
     </div><div class='col-md-8'>
     <div id="gameboard" style="padding:20px"></div>
     </div>
