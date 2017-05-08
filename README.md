@@ -20,3 +20,5 @@ We've started our project from this template from Bucky Roberts: https://github.
 ### Sources Cited
 Animation for Card Flip
 https://davidwalsh.name/css-flip
+
+![](http://i65.tinypic.com/rushgk.jpg)
