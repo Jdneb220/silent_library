@@ -66,7 +66,6 @@ System.register(['angular2/core', './silentlibrary.service'], function(exports_1
                         "Contestant must dance along to the video of Thriller by Michael Jackson.",
                         "Contestants must drink an entire Happy Meal blended and puréed together (including the drink)"
                     ];
-                    this.cards = ["GA_Logo.png", "skull.png"]; //we need to make the # of cards the same as players
                     this.silentlibrary = silentlibraryService.getSilentlibrary();
                 }
                 SilentLibraryComponent.prototype.onClick = function (event) {
@@ -74,14 +73,12 @@ System.register(['angular2/core', './silentlibrary.service'], function(exports_1
                     this.clickMessage = this.punishments[randPunIndex];
                     // console.log("this button was clicked")
                 };
-                SilentLibraryComponent.prototype.onClickCard = function (event) {
-                    var randCardIndex = Math.floor((Math.random() * (this.cards.length)));
-                    this.clickCard = this.cards[randCardIndex];
-                };
                 SilentLibraryComponent = __decorate([
                     core_1.Component({
                         selector: 'silentlibrary',
-                        template: "\n    <h1>Silent Library</h1>\n            <p>{{ title }}</p>\n            <ul>\n              <li *ngFor=\"#rule of rules\">\n              {{ rule }}\n              </li>\n            </ul>\n            <br>\n            <h2>Punishments</h2>\n            {{ clickMessage }}\n            <br>\n            <button id=\"punButton\" style=\"display: none;\" (click)=\"onClick($event)\">Submit</button>\n    ",
+
+                        template: "\n    <h1>Silent Library</h1>\n            <p>{{ title }}</p>\n            <ul>\n              <li *ngFor=\"#rule of rules\">\n              {{ rule }}\n              </li>\n            </ul>\n            <br>\n            <h2>Punishments</h2>\n            {{ clickMessage }}\n            <br>\n            <button id=\"punButton\" style=\"display: none;\" (click)=\"onClick($event)\">Submit</button>\n\n        </div>\n        <div class='col-md-8'>\n            <div id=\"gameboard\" style=\"padding:20px\"></div>\n        </div>\n    </div>\n    ",
+
                         providers: [silentlibrary_service_1.SilentlibraryService]
                     }), 
                     __metadata('design:paramtypes', [silentlibrary_service_1.SilentlibraryService])

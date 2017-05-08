@@ -31,7 +31,7 @@ System.register(['angular2/core', './silentlibrary.component', './amountplayers.
                     core_1.Component({
                         selector: 'my-app',
                         styleUrls: ['https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'],
-                        template: "\n\n    <div class='row'>\n    <div class='col-md-4'>\n    <amount class=\"center-block\"></amount>\n    <silentlibrary></silentlibrary>\n    </div><div class='col-md-8'>\n    <div id=\"gameboard\" style=\"padding:20px\"></div>\n    </div>\n    ",
+                        template: "\n\n    <div class='row'>\n    <div class='col-md-4'>\n    <amount class=\"center-block\"></amount>\n    <silentlibrary id=\"mysilentlibrary\"></silentlibrary>\n    </div><div class='col-md-8'>\n    <div id=\"gameboard\" style=\"padding:20px\"></div>\n    </div>\n    ",
                         directives: [silentlibrary_component_1.SilentLibraryComponent, amountplayers_component_1.AmountPlayersComponent]
                     }), 
                     __metadata('design:paramtypes', [])
