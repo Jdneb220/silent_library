@@ -15,7 +15,7 @@ import {SilentlibraryService} from './silentlibrary.service'
             <h2>Punishments</h2>
             {{ clickMessage }}
             <br>
-            <button (click)="onClick($event)">Submit</button>
+            <button id="punButton" style="display:none" (click)="onClick($event)">Submit</button>
     `,
     providers: [SilentlibraryService]
 })
