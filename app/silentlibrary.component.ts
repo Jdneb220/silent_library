@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
- import {SilentlibraryService} from './silentlibrary.service'
+import {SilentlibraryService} from './silentlibrary.service'
 
 
 @Component({

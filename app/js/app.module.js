@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', './app.component', './silentlibrary.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', './app.component', './silentlibrary.component', './amountplayers.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, forms_1, app_component_1, silentlibrary_component_1;
+    var core_1, platform_browser_1, forms_1, app_component_1, silentlibrary_component_1, amountplayers_component_1;
     var AppModule;
     return {
         setters:[
@@ -28,6 +28,9 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
             },
             function (silentlibrary_component_1_1) {
                 silentlibrary_component_1 = silentlibrary_component_1_1;
+            },
+            function (amountplayers_component_1_1) {
+                amountplayers_component_1 = amountplayers_component_1_1;
             }],
         execute: function() {
             AppModule = (function () {
@@ -36,7 +39,7 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                 AppModule = __decorate([
                     core_1.NgModule({
                         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-                        declarations: [app_component_1.AppComponent, silentlibrary_component_1.SilentLibraryComponent],
+                        declarations: [app_component_1.AppComponent, silentlibrary_component_1.SilentLibraryComponent, amountplayers_component_1.AmountPlayersComponent],
                         bootstrap: [app_component_1.AppComponent]
                     }), 
                     __metadata('design:paramtypes', [])
