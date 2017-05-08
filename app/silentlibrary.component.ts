@@ -12,15 +12,10 @@ import {Component} from 'angular2/core';
       </li>
     </ul>
     `
-    // providers: [SilentlibraryService]
 })
 
 export class SilentLibraryComponent {
   title = "Silent Library Rules";
   rules = ["Rule1", "Rule2", "Rule3"];
   silentlibrary;
-
-  // constructor(silentlibraryService: SilentlibraryService){
-  //   this.silentlibrary = silentlibraryService.getSilentlibrary();
-  // }
 }

@@ -5,8 +5,8 @@ import {SilentLibraryComponent} from './silentlibrary.component'
     selector: 'my-app',
     template: `<h1>Weekend Project by Ben, Ray and Liz</h1>
     <silentlibrary></silentlibrary>
-    `
-    // directives: [SilentLibraryComponent]
+    `,
+    directives: [SilentLibraryComponent]
 })
 
 export class AppComponent {}

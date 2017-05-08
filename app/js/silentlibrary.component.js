@@ -23,15 +23,12 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 function SilentLibraryComponent() {
                     this.title = "Silent Library Rules";
                     this.rules = ["Rule1", "Rule2", "Rule3"];
-                    this.silentlibrary = silentlibraryService.getSilentlibrary();
                 }
                 SilentLibraryComponent = __decorate([
                     core_1.Component({
                         selector: 'silentlibrary',
-                        template: "\n    <h1>Silent Library</h1>\n    {{ title }}\n    <ul>\n      <li *ngFor=\"#rule of rules\">\n      {{ rule }}\n      </li>\n    </ul>\n    "
-                        template: "\n    <h1>Silent Library</h1>\n    <p>{{ title }}</p>\n    <ul>\n      <li *ngFor=\"#rule of rules\">\n      {{ rule }}\n      </li>\n    </ul>\n    ",
-                        providers: [silentlibrary_service_1.SilentlibraryService]
-                    }),
+                        template: "\n    <h1>Silent Library</h1>\n    <p>{{ title }}</p>\n    <ul>\n      <li *ngFor=\"#rule of rules\">\n      {{ rule }}\n      </li>\n    </ul>\n    "
+                    }), 
                     __metadata('design:paramtypes', [])
                 ], SilentLibraryComponent);
                 return SilentLibraryComponent;
