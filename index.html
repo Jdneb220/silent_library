@@ -55,36 +55,61 @@
 <script>
 function flipOver(){
   let playButton = document.querySelector('#playButton');
+  playButton.disabled = true
+  if ($(playButton).text() === "Reset"){
+    let allCards = document.querySelectorAll('.flip-toggle')
+    allCards.forEach(function(x,i){
+      //if card hasn't been flipped yet, add appropriate classes
+      if (!x.classList.contains('hover'))
+        if (i === punishCardIndex)
+          x.children[0].children[1].classList.add('skull');
+        else
+          x.children[0].children[1].classList.add('red_ex');
+      //if card is already flipped, remove all extra classes
+      else {
+        x.children[0].children[1].classList.remove('red_ex');
+        x.children[0].children[1].classList.remove('skull');
+      }
 
-  $(playButton).text(3)
-  setTimeout(function(){$(playButton).text(2)},1000)
-  setTimeout(function(){$(playButton).text(1)},2000)
-  setTimeout(function(){
-  $(playButton).text("Reset")
-
-  let allCards = document.querySelectorAll('.flip-toggle')
-  let punishCardIndex = Math.floor(Math.random()*(allCards.length - 1))
-  //assign backgrounds
-  allCards.forEach(function(x,i){
-    //if card hasn't been flipped yet, add appropriate classes
-    if (!x.classList.contains('hover'))
-      if (i === punishCardIndex)
-        x.children[0].children[1].classList.add('skull');
-      else
-        x.children[0].children[1].classList.add('red_ex');
-    //if card is already flipped, remove all extra classes
-    else {
-      x.children[0].children[1].classList.remove('red_ex');
-      x.children[0].children[1].classList.remove('skull');
-    }
-
-  })
-  //flip
-  allCards.forEach(function(x,i){
-    x.classList.toggle('hover');
     })
+    //flip
+    allCards.forEach(function(x,i){
+      x.classList.toggle('hover');
+      })
+    $(playButton).text("Play")
+    playButton.disabled = false
+  }
+  else {
+    $(playButton).text(3)
+    setTimeout(function(){$(playButton).text(2)},1000)
+    setTimeout(function(){$(playButton).text(1)},2000)
+    setTimeout(function(){
+    $(playButton).text("Reset")
+    playButton.disabled = false
+    let allCards = document.querySelectorAll('.flip-toggle')
+    let punishCardIndex = Math.floor(Math.random()*(allCards.length - 1))
+    //assign backgrounds
+    allCards.forEach(function(x,i){
+      //if card hasn't been flipped yet, add appropriate classes
+      if (!x.classList.contains('hover'))
+        if (i === punishCardIndex)
+          x.children[0].children[1].classList.add('skull');
+        else
+          x.children[0].children[1].classList.add('red_ex');
+      //if card is already flipped, remove all extra classes
+      else {
+        x.children[0].children[1].classList.remove('red_ex');
+        x.children[0].children[1].classList.remove('skull');
+      }
 
-  }, 3000)
+    })
+    //flip
+    allCards.forEach(function(x,i){
+      x.classList.toggle('hover');
+      })
+
+    }, 3000)
+  }
 }
 </script>
 </html>
