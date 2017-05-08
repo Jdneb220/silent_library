@@ -17,11 +17,13 @@ import {SilentlibraryService} from './silentlibrary.service'
             <br>
             <button id="punButton" style="display: none;" (click)="onClick($event)">Submit</button>
 
+
         </div>
         <div class='col-md-8'>
             <div id="gameboard" style="padding:20px"></div>
         </div>
     </div>
+
     `,
     providers: [SilentlibraryService]
 })
