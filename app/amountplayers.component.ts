@@ -7,7 +7,7 @@ import {bootstrap} from 'angular2/bootstrap';
   template: `
   <h1>{{ title }}</h1>
   <form id="playercount">
-    <label for="playernumber">Select the amount of players</label>
+    <label for="playernumber">Select the amount of players</label><br>
     <a class='sillycircle' (click)="onClick2(4)">4</a>
     <a class='sillycircle' (click)="onClick2(5)">5</a>
     <a class='sillycircle' (click)="onClick2(6)">6</a>

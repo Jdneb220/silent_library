@@ -53,7 +53,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 AmountPlayersComponent = __decorate([
                     core_1.Component({
                         selector: 'amount',
-                        template: "\n  <h1>{{ title }}</h1>\n  <form id=\"playercount\">\n    <label for=\"playernumber\">Select the amount of players</label>\n    <a class='sillycircle' (click)=\"onClick2(4)\">4</a>\n    <a class='sillycircle' (click)=\"onClick2(5)\">5</a>\n    <a class='sillycircle' (click)=\"onClick2(6)\">6</a>\n    <a class='sillycircle' (click)=\"onClick2(7)\">7</a>\n    <a class='sillycircle' (click)=\"onClick2(8)\">8</a>\n  </form>\n  <h2>Amount of players: {{ players }}  {{ error }}</h2>\n"
+                        template: "\n  <h1>{{ title }}</h1>\n  <form id=\"playercount\">\n    <label for=\"playernumber\">Select the amount of players</label><br>\n    <a class='sillycircle' (click)=\"onClick2(4)\">4</a>\n    <a class='sillycircle' (click)=\"onClick2(5)\">5</a>\n    <a class='sillycircle' (click)=\"onClick2(6)\">6</a>\n    <a class='sillycircle' (click)=\"onClick2(7)\">7</a>\n    <a class='sillycircle' (click)=\"onClick2(8)\">8</a>\n  </form>\n  <h2>Amount of players: {{ players }}  {{ error }}</h2>\n"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AmountPlayersComponent);

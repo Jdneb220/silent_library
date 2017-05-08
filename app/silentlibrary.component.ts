@@ -5,8 +5,6 @@ import {SilentlibraryService} from './silentlibrary.service'
     selector: 'silentlibrary',
     template: `
     <h1>Silent Library</h1>
-    <div class='row'>
-        <div class='col-md-4'>
             <p>{{ title }}</p>
             <ul>
               <li *ngFor="#rule of rules">
