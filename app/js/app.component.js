@@ -30,7 +30,7 @@ System.register(['angular2/core', './silentlibrary.component', './amountplayers.
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "<h1>Weekend Project by Ben, Ray and Liz</h1>\n    <amount></amount><br>\n    <silentlibrary></silentlibrary><br>\n    ",
+                        template: "\n    <amount class=\"center-block\"></amount>\n    <silentlibrary></silentlibrary>\n    <div id=\"gameboard\" style=\"padding:20px\"></div>\n\n    ",
                         directives: [silentlibrary_component_1.SilentLibraryComponent, amountplayers_component_1.AmountPlayersComponent]
                     }), 
                     __metadata('design:paramtypes', [])

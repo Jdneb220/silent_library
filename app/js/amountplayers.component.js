@@ -41,15 +41,15 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 };
                 AmountPlayersComponent.prototype.cardBuilder = function () {
                     var playercount = this.players;
-                    console.log(this.players);
-                    for (var x = playercount; x > 0; x--) {
-                        document.querySelector('#gameboard').innerHTML += "<div class=\"flip-container flip-toggle\">\n      <div class=\"flipper\">\n        <div class=\"front\">\n          <!-- front content -->\n          Front\n        </div>\n        <div class=\"back\">\n          <!-- back content -->\n          Back\n        </div>\n      </div>\n    </div>";
+                    for (var x = 1; x <= playercount; x++) {
+                        document.querySelector('#gameboard').innerHTML += "<div class=\"flip-container flip-toggle\">\n      <div class=\"flipper\">\n        <div class=\"front\">\n          <!-- front content -->\n          Player " + x + "\n        </div>\n        <div class=\"back\">\n          <!-- back content -->\n          Back\n        </div>\n      </div>\n    </div>";
                     }
+                    document.querySelector('#gameboard').innerHTML += "<button onclick=\"flipOver()\" class=\"sexyButton\">Toggle Flip</button>";
                 };
                 AmountPlayersComponent = __decorate([
                     core_1.Component({
                         selector: 'amount',
-                        template: "\n  <h1>{{ title }}</h1>\n  <form id=\"playercount\">\n    <label for=\"playernumber\">Select the amount of players</label>\n    <input type=\"number\" name=\"playernumber\">\n    <button (click)=\"onClick($event)\"  >Submit</button>\n  </form>\n  {{ button }} <br>\n  <h2>Amount of players: {{ players }}  {{ error }}</h2>\n  \n  <div id=\"gameboard\"></div>\n"
+                        template: "\n  <h1>{{ title }}</h1>\n  <form id=\"playercount\">\n    <label for=\"playernumber\">Select the amount of players</label>\n    <input type=\"number\" name=\"playernumber\">\n    <button (click)=\"onClick($event)\"  >Submit</button>\n  </form>\n  {{ button }} <br>\n  <h2>Amount of players: {{ players }}  {{ error }}</h2>\n"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AmountPlayersComponent);

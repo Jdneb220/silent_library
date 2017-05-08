@@ -27,10 +27,51 @@
         });
         System.import('app/js/main').then(null, console.error.bind(console));
     </script>
+    <link type="text/css" rel="stylesheet" href="assets/style.css"  media="screen,projection"/>
 </head>
 <body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        Silent Library
+      </a>
+           <p class="navbar-text navbar-right">Weekend Project by Ben, Ray and Liz</p>
+    </div>
+
+  </div>
+</nav>
+
+
 <div class="container-fluid">
     <my-app>Loading...</my-app>
 </div>
+
+
 </body>
+<script>
+function flipOver(){
+  let allCards = document.querySelectorAll('.flip-toggle')
+  let punishCardIndex = Math.floor(Math.random()*(allCards.length - 1))
+  //assign backgrounds
+  allCards.forEach(function(x,i){
+    //if card hasn't been flipped yet, add appropriate classes
+    if (!x.classList.contains('hover'))
+      if (i === punishCardIndex)
+        x.children[0].children[1].classList.add('skull');
+      else
+        x.children[0].children[1].classList.add('red_ex');
+    //if card is already flipped, remove all extra classes
+    else {
+      x.children[0].children[1].classList.remove('red_ex');
+      x.children[0].children[1].classList.remove('skull');
+    }
+
+  })
+  //flip
+  allCards.forEach(function(x,i){
+    x.classList.toggle('hover');
+    })
+}
+</script>
 </html>

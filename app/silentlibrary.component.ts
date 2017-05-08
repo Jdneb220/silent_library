@@ -1,32 +1,28 @@
 import {Component} from 'angular2/core';
 import {SilentlibraryService} from './silentlibrary.service'
 
-
 @Component({
     selector: 'silentlibrary',
     template: `
     <h1>Silent Library</h1>
-    <p>{{ title }}</p>
-    <ul>
-      <li *ngFor="#rule of rules">
-      {{ rule }}
-      </li>
-    </ul>
-<<<<<<< HEAD
-    `
-})
-=======
->>>>>>> e28b33adc823ef2c96b5f06b058d43938067b39a
-
-    <br>
-    <h2>Punishments</h2>
-    {{ clickMessage }}
-    <br>
-    <button (click)="onClick($event)">Submit</button>
-    <h2>Cards</h2>
-    <img src="{{ clickCard }}" height=200px>
-    <br>
-    <button (click)="onClickCard($event)">Flip Card</button>
+    <div class='row'>
+        <div class='col-md-4'>
+            <p>{{ title }}</p>
+            <ul>
+              <li *ngFor="#rule of rules">
+              {{ rule }}
+              </li>
+            </ul>
+            <br>
+            <h2>Punishments</h2>
+            {{ clickMessage }}
+            <br>
+            <button (click)="onClick($event)">Submit</button>
+        </div>
+        <div class='col-md-8'>
+            <div id="gameboard" style="padding:20px"></div>
+        </div>
+    </div>
     `,
     providers: [SilentlibraryService]
 })
@@ -34,10 +30,7 @@ export class SilentLibraryComponent {
   clickMessage = '';
   clickCard = '';
   title = "Silent Library Rules";
-<<<<<<< HEAD
-  rules = ["Rule1", "Rule2", "Rule3"];
-  silentlibrary;
-=======
+
   rules = ["Pick number of players", "On the count of three, flip over cards", "Whoever gets the skull card needs to do a task", "Must complete the task without making noise"];
   punishments = [
     "The contestant must endure a balloon being blown up under his/her shirt until it busts.",
@@ -95,5 +88,5 @@ export class SilentLibraryComponent {
   constructor(silentlibraryService: SilentlibraryService){
     this.silentlibrary = silentlibraryService.getSilentlibrary();
   }
->>>>>>> e28b33adc823ef2c96b5f06b058d43938067b39a
+
 }

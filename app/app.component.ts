@@ -5,10 +5,12 @@ import {AmountPlayersComponent} from
 
 @Component({
     selector: 'my-app',
-    template: `<h1>Weekend Project by Ben, Ray and Liz</h1>
-    <amount></amount><br>
-    <silentlibrary></silentlibrary><br>
-    `
+    template: `
+    <amount class="center-block"></amount>
+    <silentlibrary></silentlibrary>
+    <div id="gameboard" style="padding:20px"></div>
+
+    `,
     directives: [SilentLibraryComponent, AmountPlayersComponent]
 })
 

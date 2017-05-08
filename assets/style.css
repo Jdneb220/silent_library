@@ -60,3 +60,17 @@ body{
 /*.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
   transform: rotateY(180deg);
 }*/
+
+.navbar{
+  border-radius: 0px;
+  background-color: #222;
+  border-color: #222;
+}
+.navbar-header{
+    width:100%;
+}
+
+.navbar-right {
+    float: right!important;
+    padding: 0px 10px;
+}
