@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {SilentlibraryService} from './silentlibrary.service'
 
+
 @Component({
     selector: 'silentlibrary',
     template: `
@@ -11,6 +12,7 @@ import {SilentlibraryService} from './silentlibrary.service'
       {{ rule }}
       </li>
     </ul>
+
     <br>
     <h2>Punishments</h2>
     {{ clickMessage }}
@@ -79,6 +81,7 @@ export class SilentLibraryComponent {
       this.clickCard = this.cards[randCardIndex];
     }
     silentlibrary;
+
 
   constructor(silentlibraryService: SilentlibraryService){
     this.silentlibrary = silentlibraryService.getSilentlibrary();
